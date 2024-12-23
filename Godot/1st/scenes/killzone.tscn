@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://by7ou3weqey20"]
+
+[ext_resource type="Script" path="res://scripts/killzone.gd" id="1_bl80r"]
+[ext_resource type="AudioStream" uid="uid://bcoo0mlbcg324" path="res://assets/sounds/anime-ahh.mp3" id="2_qkob7"]
+
+[node name="killzone" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_bl80r")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="death_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_qkob7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

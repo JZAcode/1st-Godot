@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2j72omf815hj"]
+
+[ext_resource type="Texture2D" uid="uid://cuf0rv5ivdc4" path="res://assets/sprites/leave-pixel-style-free-png.png" id="1_7qhje"]
+
+[node name="touch_control" type="CanvasLayer"]
+
+[node name="jump" type="TouchScreenButton" parent="."]
+light_mask = 4
+position = Vector2(931, 433)
+scale = Vector2(0.14898, 0.156122)
+texture_normal = ExtResource("1_7qhje")
+action = "jump"
+
+[node name="right" type="TouchScreenButton" parent="."]
+light_mask = 4
+position = Vector2(351, 380)
+rotation = 0.84823
+scale = Vector2(0.164195, 0.187008)
+texture_normal = ExtResource("1_7qhje")
+action = "move_right"
+
+[node name="left" type="TouchScreenButton" parent="."]
+light_mask = 4
+position = Vector2(100.17, 639.072)
+rotation = -2.03854
+scale = Vector2(0.162975, 0.194641)
+texture_normal = ExtResource("1_7qhje")
+action = "move_left"
